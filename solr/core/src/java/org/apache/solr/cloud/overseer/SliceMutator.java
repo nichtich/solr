@@ -22,6 +22,7 @@ import java.lang.invoke.MethodHandles;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import org.apache.solr.client.solrj.cloud.DistribStateManager;
 import org.apache.solr.client.solrj.cloud.SolrCloudManager;
@@ -102,6 +103,7 @@ public class SliceMutator {
                 ZkStateReader.STATE_PROP, message.getStr(ZkStateReader.STATE_PROP),
                 ZkStateReader.NODE_NAME_PROP, nodeName,
                 ZkStateReader.BASE_URL_PROP, baseUrl,
+                ZkStateReader.FORCE_SET_STATE_PROP, "false",
                 ZkStateReader.REPLICA_TYPE, message.get(ZkStateReader.REPLICA_TYPE)),
             coll,
             slice);

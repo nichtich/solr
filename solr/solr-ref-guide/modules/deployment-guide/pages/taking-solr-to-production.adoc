@@ -116,7 +116,7 @@ This gives you a better overview and will help you understand important details 
 The Solr home directory (not to be confused with the Solr installation directory) is where Solr manages core directories with index files.
 By default, the installation script uses `/var/solr/data`.
 If the `-d` option is used on the install script, then this will change to the `data` subdirectory in the location given to the -d option.
-Take a moment to inspect the contents of the Solr home directory on your system.
+Take a moment to inspect the contents of the Solr home directory on your system. If the directory is empty see `/opt/solr/server/solr` for defaults.
 If you do not xref:zookeeper-file-management.adoc[store `solr.xml` in ZooKeeper], the home directory must contain a `solr.xml` file.
 When Solr starts up, the Solr Control Script passes the location of the home directory using the `-Dsolr.solr.home=...` system property.
 
